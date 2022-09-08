@@ -46,7 +46,7 @@ export default class Mtp_HomePage extends NavigationMixin(LightningElement) {
         var urlValue = '/s/';
 
         if(name == "course"){
-            pageapiname = 'course__c';
+            pageapiname = 'Course__c';
             urlValue += 'course';
         }else if(name == "timesheet"){
             pageapiname = 'Timesheet__c';
