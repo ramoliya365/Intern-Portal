@@ -1,0 +1,266 @@
+/* General CSS */
+.container {
+  background-image: url('/resource/mtp_LeavePageBG');
+  background-repeat: no-repeat;
+  padding-bottom: 2%;
+}
+.sub_container {
+  display: flex;
+}
+.header_text {
+  /* background-image: url('/resource/mtp_LeavePageBG'); */
+  text-align: center;
+  padding: 7% 0% 7% 0%;
+  /* background-repeat: round; */
+}
+.header_text h1 {
+  font-family: 'Noto Sans';
+  font-weight: 600;
+  font-size: 40px;
+}
+.header_text h3 {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-size: 20px;
+}
+.stack-top_left{
+  width: 50%;
+  min-height: 520px;
+  background-color: #EDEAEA;
+  margin-left: 10%;
+  border: 1px solid #EDEAEA;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.stack-top_left h1 {
+  color: #000000;
+  border-bottom: 1px solid gray;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 50px;
+  padding-left: 5%;
+}
+.stack-top_right{
+  min-height: 520px;
+  background-color: #EDEAEA;
+  width: 25%;
+  margin-left: 3%;
+  margin-right: 12%;
+  border: 1px solid #EDEAEA;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.stack-top_right h1 {
+  color: #000000;
+  border-bottom: 1px solid gray;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+}
+.row_div {
+  border-bottom: 1px solid gray;
+}
+.row_div1 {
+  padding: 0% 5% 2% 5%;
+}
+.row_div1 .inform_box {
+  width: 47%;
+}
+.row_div1 .reason_box {
+  width: 80%;
+}
+.row_div1 h3 {
+  margin-top: 2%;
+  font-weight: 400;
+  color: #000000;
+}
+.row_div2 {
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+.row_div2 h2 {
+  font-size: 20px;
+  margin: 3% 0% 4% 0%;
+}
+.row_div3 {
+  display: flex;
+  padding: 6% 10% 2% 10%;
+}
+.row_div4 {
+  border-bottom: 1px solid gray;
+  display: flex;
+  padding: 2% 10% 6% 10%;
+}
+.row_div5 {
+  display: flex;
+  padding: 5% 20% 3% 15%;
+}
+.row_div6 {
+  display: flex;
+  padding: 3% 20% 5% 15%;
+}
+.dis_left {
+  float: left;
+  width: 50%;
+}
+.dis_right {
+  text-align: right;
+  width: 50%;
+}
+.dis_left_01 {
+  float: left;
+  width: 80%;
+}
+.dis_right_01 {
+  text-align: right;
+  width: 20%;
+}
+.header_Balance {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px !important;
+  line-height: 30px !important;
+  color: #000000;
+}
+.pHead {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #949191;
+}
+.pbody {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+}
+/* .footer_container{
+  display: flex;
+} */
+.button_cls {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.logo_class {
+  border-radius: 50%;
+  width: 67px;
+  height: 67px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo_class_1 {
+  margin: 5% 2% 5% 5%;
+  border: 0.5px solid #000000;
+  background-image: url('/resource/mtp_MVClouds_Logo_White');
+  background-color: #FFFFFF;
+}
+.logo_class_2 {
+  margin-top: 4%;
+  background-image: url('/resource/mtp_booking_details');
+}
+/* .submit_btn {
+  color: #FFFFFF;
+  border-color: #02ACE1;
+  background-color: #02ACE1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  height: 3.5vh;
+}
+.cancel_btn {
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  height: 3.5vh;
+  padding: 4% 15% 4% 14%;
+} */
+.dashed_line {
+  position: absolute;
+  border: 1px dashed #000000;
+}
+.flight_icon {
+  height: 23px;
+  width: 23px;
+  background-image: url('/resource/mtp_leaveflighticon');
+}
+.dash {
+  width: 10%;
+  transform: rotate(-0.07deg);
+}
+.dash line {
+  stroke: #000000;
+  stroke-dasharray: 0.5 3.2;
+  stroke-linecap: round;
+}
+.sdate_cls {
+  width: 28%;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sdate_cls h2 {
+  color: #949191;
+  align-self: flex-start;
+  margin-left: 10%;
+}
+.start_date {
+  width: 80%;
+}
+.middle_cls {
+  width: 28%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.middle_cls h2 {
+  color: #949191;
+}
+.edate_cls {
+  width: 28%;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.edate_cls h2 {
+  color: #949191;
+  align-self: flex-start;
+  margin-left: 10%;
+}
+.end_date {
+  width: 80%;
+}
+.slds-scope .slds-form-element__control .slds-radio {
+  display: inline !important;
+}
+.submit_btn {
+	--sds-c-button-brand-color-background: #02ACE1;
+	--sds-c-button-brand-color-background-hover: #02ACE1;
+	--sds-c-button-brand-color-border: #02ACE1;
+	--sds-c-button-brand-color-border-hover: #02ACE1;
+  --sds-c-button-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+}
+.cancel_btn {
+  --sds-c-button-brand-color-background: #FFFFFF;
+  --sds-c-button-brand-color-background-hover: #FFFFFF;
+	--sds-c-button-brand-color-border: #FFFFFF;
+	--sds-c-button-brand-color-border-hover: #FFFFFF;
+  --sds-c-button-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+}
+/************************************************************************ END  ************************************************************************/

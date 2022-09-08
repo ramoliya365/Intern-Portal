@@ -1,0 +1,31 @@
+<template>
+    <div class="container">
+        <form id="formEmail" action="">
+            <div class="line">
+                <label for="email">Email:</label>
+                <lightning-input type="email" id="email" variant="label-hidden"></lightning-input>
+            </div>
+            <div class="line">
+                <label for="subject">Subject:</label>
+                <lightning-input type="text" id="subject" variant="label-hidden"></lightning-input>
+            </div>
+            <div class="line">
+                <label for="message">Message:</label>
+                <textarea id="message" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+
+            <div class="line submitline">
+                <button class="button submitBtn" id="submitBtn">Send</button>
+                <button class="button resetBtn" id="resetBtn">Reset</button>
+            </div>
+        </form>
+    </div>
+</template>

@@ -1,0 +1,40 @@
+<template>
+
+    <template if:true={isSpinner}>
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </template>
+    
+    <!-- Toast Message -->
+    <c-mtp_-toast-message></c-mtp_-toast-message>
+    <!-- Toast Message -->
+    
+
+    <div class="container" style={backgroundImage}>
+        <img class="topLogo" src={highResLogo} />
+        <div class="loginConrainer">
+            <div class="loginDIv">
+                <p class="loginTitle">
+                    Log in
+                </p>
+                <p class="loginDisc">
+                    Hey, enter yout details to get sign in to your account
+                </p>
+                <div class="loginInput">
+                    <input class="slds-input" type="Email" name="username" placeholder="Enter Email">
+                </div>
+                <div class="loginInput">
+                    <input class="slds-input" type="Password" name="password" placeholder="Enter Password">
+                </div>
+                <div class="loginBtnDiv">
+                    <button class="slds-button slds-button_neutral loginBtn" onclick={signin}> Sign Up </button>
+                </div>
+                <div class="loginLink">
+                    <a href="/s/login/ForgotPassword">Forgot Password ?</a>
+                </div>
+            </div>
+        </div>
+        <img class="leftImg" src={boarding_sign} />
+        <img class="rightImg" src={presets} />
+    </div>
+ 
+</template>

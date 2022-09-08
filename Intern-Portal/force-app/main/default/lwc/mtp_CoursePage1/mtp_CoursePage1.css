@@ -1,0 +1,131 @@
+.myroutetxt{
+
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.leveltxt{
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.exploretxt{
+    
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 4rem;
+}
+
+.brd1{
+
+    border: 1px dashed #000000;
+}
+
+.brd2{
+
+    border: 1px dashed #000000;
+}
+
+.profdiv{
+
+    height: 8rem;
+    width: 25%;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),0 4px 4px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+.footerdiv{
+    display: flex;
+}
+
+.mapimg{
+    text-align: center;
+    justify-content: center;
+}
+
+.locationdiv{
+    color: #000000;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 56px;
+    font-size: 13px;
+}
+
+.profCoursetxt{
+
+    text-decoration-line: underline;
+    color: #000000;
+    font-style: normal;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.cpimg1{
+    width: 70%;
+}
+.sidediv{
+    /* margin-left: 5%;
+    display: grid;     */
+}
+.maindiv{
+    background-image: url('/resource/mtp_CoursePage1_bg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cpimgdiv{
+    margin-left: -47px;
+    margin-top: 5px;
+}
+.mapimgdiv{
+    width: 78%;
+    height: 35rem;
+}
+.cpimgdiv2{
+    margin-top: -12.6rem;
+}
+.cpimg3div{
+    margin-left: -3%;
+    margin-top: 17px;
+}
+.map_cls1{
+    width: 600px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px){
+
+    .cpimgdiv{
+        margin-left: -32px !important;
+        margin-top: 5px !important;
+    }
+    .mapimgdiv{
+        width: 62% !important;
+        height: 24rem !important;
+    }
+    .cpimgdiv2{
+        width: 80% !important;
+        margin-top: -9rem !important;
+    }
+    .cpimg3div{
+        margin-left: -5% !important;
+        margin-top: 13px !important;
+    }
+    .profdiv{
+        width: 30% !important;
+    }
+    .cpimg1{
+        width: 77% !important;
+    }
+    .cpimgmndiv{
+        margin-left: 8rem !important;
+    }
+}

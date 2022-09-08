@@ -1,0 +1,1 @@
+console.log('MTP GENERAL SCRIP FILE');

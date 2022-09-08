@@ -1,0 +1,46 @@
+<template>
+    <div class="maindiv">
+        <div class="myroutetxt">My Route</div>
+        <div class="leveltxt slds-m-top_medium">Level 1</div>
+        <div class="exploretxt slds-m-top_medium">It's a big world out there, Go explore</div>
+        <div class="profdiv slds-m-top_xx-large slds-grid slds-wrap">
+            <div class="cpimgdiv slds-size_2-of-5">
+                <img class="cpimg1" src={cpImg1}>
+            </div>
+            <div class="sidediv slds-size_3-of-5">
+                <p class="profCoursetxt">Professionalism Course</p>
+                <span class="locationdiv">
+                    <div>
+                        <p>(Location)</p>
+                        <div class="brd1"></div>
+                        <p>MV Clouds</p>
+                    </div>
+                    <div><img src={cpImg4}></div>
+                    <div>
+                        <p>(Destination)</p>
+                        <div class="brd2"></div>
+                        <p>Salesforce</p>
+                    </div>
+                </span>
+            </div>    
+        </div>
+        <div class="map_cls1">
+            
+        </div>
+        <div class="mapimg"><img class="mapimgdiv" src={cpImg5} usemap="#Map" width="400" height="379"></div>
+        <map name="Map" id="Map">
+            <area shape="poly" class="level 1" coords="235,244,231,207,212,220,220,221,233,222,256,224,255,217,249,210,237,239,223,223,216,217,252,227,250,235,211,220,224,212,239,209,231,237,247,233,234,226" alt="Circle" href="" onclick={level1method}>                                    
+            <!-- <area alt="" href="" class="level 1" coords="275,335,264,326,256,316,255,299,264,291,274,285,294,285,299,296,304,302,302,315,294,324,287,329" shape="poly" onclick={level1method}> -->
+            <area shape="rect" coords="1790,770,1792,772" alt="Image Map" style="outline:none;" title="Image Map" onclick={level1method} />
+            <area shape="poly" class="level 2" coords="473,272,469,236,450,252,458,252,471,252,484,252,497,252,492,243,485,243,457,240,464,237,484,237,484,268,472,273,462,261,452,259,453,250,458,250,471,250" alt="Circle" href="" onclick={level2method}>
+            <area shape="poly" class="level 3" coords="668,216,2" alt="Circle" href="" onclick={level3method}>
+            <area shape="poly" class="level 4" coords="1008,419,1" alt="Circle" href="" onclick={level4method}>
+            <area shape="poly" class="level 5" coords="1189,338,1" alt="Circle" href="" onclick={level5method}>
+            <area shape="poly" class="level 6" coords="985,100,3" alt="Circle" href="" onclick={level6method}>   
+        </map>
+        <div class="footerdiv">
+            <div class="cpimgmndiv"><img class="cpimgdiv2" src={cpImg2}></div>
+            <div class="cpimg3div"><img src={cpImg3}></div>
+        </div>
+    </div>
+</template>

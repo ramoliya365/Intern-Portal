@@ -1,0 +1,259 @@
+<template>
+    <div class="main-div">
+        <div class="top-title-div">
+            <div class="ttl">
+                <div class="ttl-hdr">Timesheet</div>
+                <div class="ttl-msg">Manage your daily tasks by filling the timesheet</div>
+            </div>
+        </div>
+        <div class="timehseet-disply-div">
+            <div class="blank-div"></div>
+            <div class="timesheet-block-div">
+                <div class="ts-left-div">
+                    <div class="ts-date">
+                        <div class="cal-icon">
+                            <img src={calendarIcon} alt="calendar icon" title="Task Date">
+                        </div>
+                        <div class="tsk-dte">
+                            <lightning-input type="date" name="timesheetDate" variant="label-hidden"></lightning-input>
+                            <!-- <lightning-input type="text" name="timesheetDate" variant="label-hidden"></lightning-input> -->
+                        </div>
+                    </div>
+                    <div class="ts-dtl">
+                        <div class="tsk-dtl">
+                            <p class="txt">Task Details</p>
+                        </div>
+                        <div class="tsk-pck">
+                            <lightning-combobox name="tasks" variant="label-hidden" value={value} placeholder="Tasks"
+                                options={options} onchange={handleChange}></lightning-combobox>
+                        </div>
+                        <div class="tsk-cmnt">
+                            <lightning-textarea name="taskCommentsBox" variant="label-hidden" placeholder="Comment">
+                            </lightning-textarea>
+                        </div>
+                    </div>
+                    <div class="ts-time">
+                        <div class="tme-header">
+                            <p class="txt">Time</p>
+                        </div>
+                        <div class="start-end-time">
+                            <div>
+                                <div class="start-plane">
+                                    <img src={startTimeIcon} alt="startTimeIcon">
+                                </div>
+                                <div>
+                                    <p>Start Time</p>
+                                    <lightning-input type="time" name="startTime" variant="label-hidden">
+                                    </lightning-input>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="start-plane">
+                                    <img src={endTimeIcon} alt="endTimeIcon">
+                                </div>
+                                <div>
+                                    <p>End Time</p>
+                                    <lightning-input type="time" name="endTime" variant="label-hidden">
+                                    </lightning-input>
+                                </div>
+                            </div>
+                            <!-- <div class="round-trip"></div> -->
+                        </div>
+                    </div>
+                    <div class="ts-ttl-time">
+                        <div class="ttl-tme">
+                            <p class="txt">Total Time</p>
+                        </div>
+                        <div class="dsply-ttl-tme-div">
+                            <div class="dsply-ttl-tme">00-00-00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ts-right-div">
+                    <!-- <div class="crcle"></div> -->
+                    <div class="ts-aprvr-cmnt">
+                        <div class="txt-cmnt-div">
+                            <p class="txt">Comments</p>
+                        </div>
+                        <lightning-textarea name="commentsBox" variant="label-hidden" placeholder="Type">
+                        </lightning-textarea>
+                    </div>
+                    <div class="ts-actn">
+                        <div class="ts-aprv">
+                            <img src={approveIcon} alt="Approve" title="Approve Timesheet">
+                        </div>
+                        <div class="ts-rjct">
+                            <img src={rejectIcon} alt="Reject" title="Reject Timesheet">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <template for:each={timesheetDataList} for:item="ts">
+                <div class="timesheet-block-div" key={ts.Id}>
+                    <div class="ts-left-div">
+                        <div class="ts-date">
+                            <div class="cal-icon">
+                                <img src={calendarIcon} alt="calendar icon" title="Task Date">
+                            </div>
+                            <div class="tsk-dte">
+                                <!-- <lightning-input type="date" name="timesheetDate" variant="label-hidden">
+                                </lightning-input> -->
+                                <lightning-input type="text" name="timesheetDate" variant="label-hidden"
+                                    value={ts.CreatedDate}>
+                                </lightning-input>
+                            </div>
+                        </div>
+                        <div class="ts-dtl">
+                            <div class="tsk-dtl">
+                                <p class="txt">Task Details</p>
+                            </div>
+                            <div class="tsk-pck">
+                                <!-- <lightning-combobox name="tasks" variant="label-hidden" value={value}
+                                    placeholder="Tasks" options={options} onchange={handleChange}></lightning-combobox> -->
+                                <lightning-input type="text" name="tasks" variant="label-hidden"
+                                    value={ts.mtp_Task__r.Name}>
+                                </lightning-input>
+                            </div>
+                            <div class="tsk-cmnt">
+                                <lightning-textarea name="taskCommentsBox" variant="label-hidden" placeholder="Comment"
+                                    value={ts.Comments__c}>
+                                </lightning-textarea>
+                            </div>
+                        </div>
+                        <div class="ts-time">
+                            <div class="tme-header">
+                                <p class="txt">Time</p>
+                            </div>
+                            <div class="start-end-time">
+                                <div>
+                                    <div class="start-plane">
+                                        <img src={startTimeIcon} alt="startTimeIcon">
+                                    </div>
+                                    <div>
+                                        <p>Start Time</p>
+                                        <lightning-input type="time" name="startTime" variant="label-hidden">
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="start-plane">
+                                        <img src={endTimeIcon} alt="endTimeIcon">
+                                    </div>
+                                    <div>
+                                        <p>End Time</p>
+                                        <lightning-input type="time" name="endTime" variant="label-hidden">
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                                <!-- <div class="round-trip"></div> -->
+                            </div>
+                        </div>
+                        <div class="ts-ttl-time">
+                            <div class="ttl-tme">
+                                <p class="txt">Total Time</p>
+                            </div>
+                            <div class="dsply-ttl-tme-div">
+                                <div class="dsply-ttl-tme">00-00-00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ts-right-div">
+                        <!-- <div class="crcle"></div> -->
+                        <div class="ts-aprvr-cmnt">
+                            <div class="txt-cmnt-div">
+                                <p class="txt">Comments</p>
+                            </div>
+                            <lightning-textarea name="commentsBox" variant="label-hidden" placeholder="Type">
+                            </lightning-textarea>
+                        </div>
+                        <div class="ts-actn">
+                            <div class="ts-aprv">
+                                <img src={approveIcon} alt="Approve" title="Approve Timesheet">
+                            </div>
+                            <div class="ts-rjct">
+                                <img src={rejectIcon} alt="Reject" title="Reject Timesheet">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+
+        </div>
+
+        <div class="creat-btn" onclick={openTimesheetModal}>+</div>
+
+    </div>
+
+    <!-- Create Timesheet Popup Modal -->
+    <template if:true={isCreateTimesheetModalOpen}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header popup-header">
+                    <h1>Timesheet Details</h1>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium modal-body" id="modal-content-id-2">
+
+                    <div class="popup-fields slds-grid slds-wrap" style="padding: inherit;">
+                        <div class="slds-col slds-size_3-of-12">
+                            <span><abbr class="slds-required" title="required">* </abbr>Task</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 pm-cl"><span>:</span></div>
+                        <div class="slds-col slds-size_8-of-12">
+                            <lightning-combobox name="PopupModalTask" variant="label-hidden" placeholder="Select Task"
+                                options={taskOptionList} onchange={handleChangePopup}>
+                            </lightning-combobox>
+                        </div>
+                    </div>
+
+                    <div class="popup-fields slds-grid slds-wrap" style="padding: inherit;">
+                        <div class="slds-col slds-size_3-of-12">
+                            <span><abbr class="slds-required" title="required">* </abbr>Start Time</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 pm-cl"><span>:</span></div>
+                        <div class="slds-col slds-size_8-of-12">
+                            <lightning-input type="datetime" name="PopupModalStartTime" variant="label-hidden"
+                                onchange={handleChangePopup} value={testSD}>
+                            </lightning-input>
+                        </div>
+                    </div>
+
+                    <div class="popup-fields slds-grid slds-wrap" style="padding: inherit;">
+                        <div class="slds-col slds-size_3-of-12">
+                            <span><abbr class="slds-required" title="required">* </abbr>End Time</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 pm-cl"><span>:</span></div>
+                        <div class="slds-col slds-size_8-of-12">
+                            <lightning-input type="datetime" name="PopupModalEndTime" variant="label-hidden"
+                                onchange={handleChangePopup}>
+                            </lightning-input>
+                        </div>
+                    </div>
+
+                    <div class="popup-fields slds-grid slds-wrap" style="padding: inherit;">
+                        <div class="slds-col slds-size_3-of-12"><span>Comments</span></div>
+                        <div class="slds-col slds-size_1-of-12 pm-cl"><span>:</span></div>
+                        <div class="slds-col slds-size_8-of-12">
+                            <lightning-textarea name="PopupModalComments" variant="label-hidden"
+                                onchange={handleChangePopup}>
+                            </lightning-textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="footer">
+                        <div class="buttoncls create-btn slds-p-around_small" title="Create" onclick={createTimesheet}>
+                            Create</div>
+                        <div class="buttoncls cancel-btn slds-p-around_small" title="Cancel"
+                            onclick={closeTimesheetModal}>Cancel
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+    <!-- Create Timesheet Popup Modal -->
+</template>

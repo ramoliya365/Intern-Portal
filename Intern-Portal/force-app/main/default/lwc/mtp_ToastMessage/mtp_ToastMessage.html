@@ -1,0 +1,42 @@
+<template>
+
+    <!-- SUCCESS MESSAGE -->
+	<template if:true={success}>
+		<div>
+			<div class="slds-p-top_xx-large maincls">
+				<div class="success" style={celebrategif}>
+					<div class="slds-align_absolute-center slds-p-top_x-large">
+						<img src={successimg}/>
+                    </div>
+                    <h2 class="slds-align_absolute-center"> Congrats ! </h2>
+                    <p class="slds-align_absolute-center slds-p-top_medium"> You just unlock a new level ! </p>
+                    <div class="slds-align_absolute-center slds-p-around_medium">
+                        <div class="buttoncls slds-p-around_small">
+                            Continue
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</template>
+
+    <!-- ERROR MESSAGE -->
+	<template if:true={error}>
+		<div class="slds-notify_container">
+			<div class="slds-notify slds-notify_toast error_outer" role="status">
+				<span class="slds-no-flex error_inner" title={message}>
+                    <img class="errorimg" src={errorimg}/>
+                </span>
+				<div class="slds-p-left_medium">
+					<h1 class="tost_h1">{message}</h1>
+				</div>
+				<div class="slds-notify__close close_btn">
+					<lightning-button-icon icon-name="utility:close" size="small" variant="border-filled"
+						class="slds-button slds-button_icon slds-button_icon-inverse" alternative-text="next"
+						onclick={closeModel}></lightning-button-icon>
+				</div>
+			</div>
+		</div>
+	</template>
+
+</template>

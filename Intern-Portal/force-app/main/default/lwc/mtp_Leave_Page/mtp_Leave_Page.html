@@ -1,0 +1,186 @@
+<template>
+    <!-- <div> Starting......</div> -->
+
+    <div class="container">
+        <div class="header_text">
+          <h1>Apply for Leave</h1>
+          <h3>Manage your leaves from here</h3>
+        </div>
+
+        <div class="sub_container">
+          <div class="stack-top_left">
+            <!-- <lightning-layout multiple-rows="true" vertical-align="stretch">
+                <lightning-layout-item size="12">
+                  <h1>Leaves</h1>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="3">
+                  <div class="logo_class logo_class_1"></div>
+                </lightning-layout-item>
+                <lightning-layout-item size="3">
+                  <lightning-input type="date" name="input1" label="From" placeholder="Select Start Date" class="start_date"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="3">
+                  <h2>Duration &nbsp;<b>24h 30m</b></h2>
+                  <div>
+                    <div style="display: flex;">
+                      <div class="dashed_line"></div>
+                      <div class="flight_icon"></div>
+                      <div class="dashed_line"></div>
+                    </div>
+                  </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="3">
+                  <lightning-input type="date" name="input2" label="To" placeholder="Select End Date" class="end_date"></lightning-input>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="8">
+                  <h3>Leave Type</h3>
+                  <lightning-radio-group name="radioGroup"
+                          options={leaveTypeOption}
+                          value={leaveTypevalue}
+                          type="radio"></lightning-radio-group>
+                </lightning-layout-item>
+                <lightning-layout-item size="8">
+                  <h3>Day Type</h3>
+                  <lightning-radio-group name="radioGroup"
+                          options={dayTypeOption}
+                          value={dayTypevalue}
+                          type="radio"></lightning-radio-group>
+                </lightning-layout-item>
+                <lightning-layout-item size="8">
+                  <h3>I Want to Inform</h3>
+                  <lightning-combobox name="progress"
+                          value={informvalue}
+                          placeholder="Select your Mentor"
+                          options={informOption}
+                          class="inform_box"
+                          onchange={handleChange} ></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="8">
+                  <h3>Reason</h3>
+                  <lightning-input class="reason_box" type="text" placeholder="Type here leave reason" value=""></lightning-input>
+                </lightning-layout-item>
+                
+                <lightning-layout-item size="4">
+                  <lightning-button variant="brand" label="Apply Leave" onclick={handleClick} class="submit_btn slds-m-left_x-small"></lightning-button>
+                  <lightning-button variant="neutral" label="Cancel" onclick={handleClick} class="cancel_btn slds-m-left_x-small"></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout> -->
+
+            <h1>Leaves</h1>
+            <div class="row_div" style="display: flex;">
+              <div class="logo_class logo_class_1"></div>
+              <div class="sdate_cls">
+                <h2>From</h2>
+                <lightning-input type="date" name="input1" placeholder="Select Start Date" class="start_date"></lightning-input>
+                <br>
+              </div>
+              <div class="middle_cls">
+                <h2>Duration &nbsp;<b style="color: #000000;">24h 30m</b></h2>
+                <div>
+                  <img src={flighticon}>
+                </div>
+                <h2>Direct</h2>
+              </div>
+              <div class="edate_cls">
+                <h2>To</h2>
+                <lightning-input type="date" name="input2" placeholder="Select End Date" class="end_date"></lightning-input>
+                <br>
+              </div>
+            </div>
+            <div class="row_div1">
+              <h3>Leave Type</h3>
+              <lightning-radio-group name="radioGroup"
+                      options={leaveTypeOption}
+                      value={leaveTypevalue}
+                      class="radio-combo-inline"
+                      type="radio"></lightning-radio-group>
+              <h3>Day Type</h3>
+              <lightning-radio-group name="radioGroup"
+                      options={dayTypeOption}
+                      value={dayTypevalue}
+                      type="radio"></lightning-radio-group>
+              <h3>I Want to Inform</h3>
+              <lightning-combobox name="progress"
+                      value={informvalue}
+                      placeholder="Select your Mentor"
+                      options={informOption}
+                      class="inform_box"
+                      onchange={handleChange} ></lightning-combobox>
+              <div class="footer_container">
+                <lightning-layout>
+                  <lightning-layout-item size="7">
+                    <h3>Reason</h3>
+                    <lightning-input class="reason_box" type="text" placeholder="Type here leave reason" value=""></lightning-input>
+                  </lightning-layout-item>
+                  
+                  <lightning-layout-item class="button_cls" size="5">
+                    <lightning-button variant="brand" label="Apply Leave" onclick={handleClick} class="submit_btn slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleClick} class="cancel_btn slds-m-left_x-small"></lightning-button>
+                  </lightning-layout-item>
+                </lightning-layout>
+                <!-- <div class="dis_left">
+                  <h3>Reason</h3>
+                  <lightning-input class="reason_box" type="text" placeholder="Type here leave reason" value=""></lightning-input>
+                </div>
+                <div class="dis_right" style="position: relative;">
+                  <div class="button_cls">
+                    <lightning-button variant="brand" label="Apply Leave" onclick={handleClick} class="submit_btn slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleClick} class="cancel_btn slds-m-left_x-small"></lightning-button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="stack-top_right">
+            <h1>Booking Details</h1>
+            <div class="row_div2">
+              <div class="logo_class logo_class_2 slds-align_absolute-center"></div>
+              <h2>Name</h2>
+            </div>
+            <div class="row_div3">
+              <div class="dis_left">
+                <p class="pHead">Airlines</p>
+                <p class="pbody">MV Clouds</p>
+              </div>
+              <div class="dis_right">
+                <p class="pHead">Flight</p>
+                <p class="pbody">D408</p>
+              </div>
+            </div>
+            <div class="row_div4">
+              <div class="dis_left">
+                <p class="pHead">Flight Class</p>
+                <p class="pbody">Business Class</p>
+              </div>
+              <div class="dis_right">
+                <p class="pHead">Passanger</p>
+                <p class="pbody">1 Adult</p>
+              </div>
+            </div>
+            <h1 class="header_Balance">Leave Balance</h1>
+            <div class="row_div5">
+              <div class="dis_left_01">
+                <p class="pHead">Approved Leaves</p>
+              </div>
+              <div class="dis_right_01">
+                <p class="pbody">05</p>
+              </div>
+            </div>
+            <div class="row_div6">
+              <div class="dis_left_01">
+                <p class="pHead">Rejected Leaves</p>
+              </div>
+              <div class="dis_right_01">
+                <p class="pbody">01</p>
+              </div>
+            </div>
+            <!-- <div class="slds-align_absolute-center">
+              <input type="button" value="Continue Exploring" onclick={handleClick} class="submit_btn slds-m-left_x-small" >
+            </div> -->
+            <lightning-button variant="brand" label="Continue Exploring" onclick={handleClick} class="submit_btn slds-align_absolute-center slds-m-left_x-small" style="margin:2%;"></lightning-button>
+          </div>
+      </div>
+    </div>
+</template>

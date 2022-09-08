@@ -1,0 +1,66 @@
+.maincls {
+	display: flex;
+	justify-content: center;
+}
+.success {
+	position: absolute;
+	width: 320px;
+	height: 376px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+}
+.success h2 {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	color: #000000;
+}
+.success p {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	color: #000000;
+}
+.buttoncls {
+	background: #72CBE8;
+	border-radius: 5px;
+	cursor: pointer;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	color: #FFFFFF;
+}
+
+.success_outer, .error_outer{
+    background-color: white;
+    box-shadow: 1px 2px 4px 0px #888888;
+}
+
+.success_inner{
+    margin: 0 12px;
+    
+}
+
+.error_inner{
+    background-color: red;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.errorimg {
+	background: #FFFFFF;
+	border-radius: 30px;
+	padding: 4px 8px;
+}
+
+.tost_message h1, .tost_h1{
+    font-size: 18px !important;
+    color: black;
+}
+.tost_message h2, .tost_h2{
+    font-size: 15px !important;
+    color: rgba(0, 0, 0, 0.5); 
+}

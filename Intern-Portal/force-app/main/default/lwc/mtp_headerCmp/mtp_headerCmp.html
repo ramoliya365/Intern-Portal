@@ -1,0 +1,33 @@
+<template>
+    <input type="checkbox" class="active" id="active">
+    <label for="active" class="menu-btn">
+        <img src={icon1} class="" width="auto" height="auto"/>
+    </label>
+    <label class="menu-btn menu-btn-1">
+        <img src={icon2} class="" width="auto" height="auto"/>
+    </label>
+    <label class="menu-btn menu-btn-2" onclick={pageNavigation} data-record="logout">
+        <img src={icon3} class="" width="auto" height="auto"/>
+    </label>
+    <div class="wrapper">
+      <ul>
+<li><a href="javascript:void(0);" onclick={pageNavigation} data-record="home">Home</a></li>
+<li><a href="javascript:void(0);" onclick={pageNavigation} data-record="course">Course</a></li>
+<li><a href="javascript:void(0);" onclick={pageNavigation} data-record="timesheet">Timesheet</a></li>
+<li><a href="javascript:void(0);" onclick={pageNavigation} data-record="leave">Leave</a></li>
+<!-- <li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Feedback</a></li> -->
+</ul>
+</div>
+<div class="content">
+    <img src={logo} class="logo" width="auto" height="auto" data-record="Mv Clouds" onclick={pageNavigation}/>
+      <!-- <div class="title">
+Fullscreen Overlay Navigation Bar</div>
+<p>
+with HTML & CSS Neon Effect</p> -->
+</div>
+
+
+</template>

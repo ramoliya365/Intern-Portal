@@ -1,0 +1,292 @@
+.main-div {
+    background: #ffffff;
+    height: 96vh;
+    width: 100%;
+    background-image: url('/resource/mtp_Timesheet_bg_image');
+    background-size: 100% 47%;
+    background-repeat: no-repeat;
+}
+
+.top-title-div {
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ttl-hdr {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    color: #000000;
+}
+
+.ttl-msg {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.timehseet-disply-div {
+    height: 70%;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    text-align: -webkit-center;
+    overflow-y: auto;
+}
+
+.blank-div {
+    height: 20%;
+}
+
+.timesheet-block-div {
+    /* background: #EDEAEA; */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    height: 25%;
+    min-height: 200px;
+    width: 80%;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.ts-left-div {
+    background: #EDEAEA;
+    width: 70%;
+    display: flex;
+}
+
+.ts-date {
+    width: 20%;
+    padding-inline: 2%;
+}
+
+.cal-icon {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tsk-dte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+
+.ts-dtl {
+    width: 20%;
+    padding-inline: 2%;
+}
+
+.tsk-cmnt {
+    margin-top: 5%;
+}
+
+.ts-time {
+    width: 45%;
+    padding-inline: 2%;
+}
+
+.round-trip {
+    border-radius: 50%;
+    position: absolute;
+    /* left: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    height: 50px;
+    width: 50px;
+}
+
+.start-plane {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #02ACE1;
+    height: 40px;
+    width: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ts-ttl-time {
+    width: 15%;
+}
+
+.ts-right-div {
+    background: #EDEAEA;
+    border-radius: 5px;
+    width: 30%;
+    display: flex;
+}
+
+.ts-aprvr-cmnt {
+    width: 65%;
+    padding-inline: 5%;
+}
+
+.txt-cmnt-div {
+    height: 25%;
+    align-items: center;
+    display: flex;
+}
+
+.ts-actn {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dsply-ttl-tme-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.dsply-ttl-tme {
+    background: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+}
+
+.tsk-dtl {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height: 25%;
+}
+
+.start-end-time {
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.tme-header {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height: 25%;
+}
+
+.ttl-tme {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height: 25%;
+}
+
+.txt {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    color: #000000;
+}
+
+.ts-aprv {
+    width: 50%;
+}
+
+.ts-rjct {
+    width: 50%;
+}
+
+.crcle {
+    /* position: absolute; */
+    display: block;
+    width: 2em;
+    height: 2em;
+    background: #fff;
+    border-radius: 50%;
+    left: -.5em;
+}
+
+.creat-btn {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #02ACE1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem
+}
+
+/* Create Timesheet Popup modal */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.popup-header {
+    background: #02ACE1;
+    color: white;
+    font-size: x-large;
+}
+
+.buttoncls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: initial;
+    height: 4vh;
+    width: 15%;
+    min-height: 37px;
+    min-width: 90px;
+    cursor: pointer;
+}
+
+.create-btn {
+    background: #02ACE1;
+    color: white;
+}
+
+.cancel-btn {
+    color: black;
+    background: #E6E7E9;
+    margin-left: 1rem;
+}
+
+.popup-fields {
+    align-items: center;
+    font-size: 1rem;
+}

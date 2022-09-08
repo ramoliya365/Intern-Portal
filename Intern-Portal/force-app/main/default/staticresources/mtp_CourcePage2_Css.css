@@ -1,0 +1,30 @@
+.courseDiv .slds-tabs_default__nav{
+    border: none;
+}
+
+.courseDiv .slds-tabs_default__item.slds-active:after, 
+.courseDiv .slds-tabs_default__item.slds-is-active:after, 
+.courseDiv .slds-tabs--default__item.slds-active:after, 
+.courseDiv .slds-tabs--default__item.slds-is-active:after{
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+}
+
+.courseDiv .slds-tabs_default__item:hover:after, 
+.courseDiv .slds-tabs--default__item:hover:after{
+    height: 3px;
+    width: 3px;
+    border-radius: 3px;
+}
+
+.courseDiv .slds-tabs_default__item:after, 
+.courseDiv .slds-tabs--default__item:after{
+    bottom: 17px;
+    left: 3px;
+}
+
+.courseDiv .slds-tabs_default__link[tabindex="0"]:focus, 
+.courseDiv .slds-tabs--default__link[tabindex="0"]:focus{
+    text-decoration: none;
+}

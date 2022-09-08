@@ -1,0 +1,89 @@
+<template>
+
+	<div class="container">
+		<div class="imgDiv" style={backgroundImage}>
+			<div class="titleDiv">
+				<p class="workTitle">My Tasks</p>
+				<p class="workDisc">Let’s learn and become pro with us !</p>
+			</div>
+		</div>
+		<div class="workContainer">
+			<div class="slds-grid slds-wrap">
+				<div class="slds-col slds-size_12-of-12">
+					<!-- modal start -->
+					<template if:true={isShowModal} >
+						<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+							aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+							<div class="slds-modal__container">
+								<!-- modal header start -->
+								<header class="slds-modal__header">
+									<button
+										class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+										title="Close" onclick={hideModalBox}>
+										<lightning-icon icon-name="utility:close" alternative-text="close"
+											variant="inverse" size="small"></lightning-icon>
+										<span class="slds-assistive-text">Close</span>
+									</button>
+									<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{taskName}</h2>
+								</header>
+
+								<!-- modal body start -->
+								<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+									<p>{taskDescription}</p>
+								</div>
+
+								<!-- modal footer start-->
+								<footer class="slds-modal__footer">
+									<button class="slds-button slds-button_neutral"
+										onclick={redirectToCompleted} id={taskId} >End</button>
+										<button class="slds-button slds-button_neutral"
+										onclick={hideModalBox}>Close</button>
+								</footer>
+
+							</div>
+						</section>
+						<div class="slds-backdrop slds-backdrop_open"></div>
+					</template>
+<!-- modal end -->
+<div class="courseDiv subContainer">
+    <h2 style="margin-bottom: 10px;">Upcoming Tasks</h2>
+    <div>
+        <lightning-tabset>
+            <lightning-tab label="All">
+                <div class="brTabDiv"></div>
+                <div class="moduleContainer">
+                    <template for:each={taskList} for:item="list" for:index="index">
+											<div class="moduleDiv" key={list.Id} >
+												<div class="imgSmallDiv">
+												</div>
+												<div class="contentDiv">
+													<h3 class="mainText"> {list.Name} </h3>
+												</div>
+												<div class="btnDiv">
+													<button class="slds-button slds-button_neutral startBtn"
+														onclick={showModalBox} name={list.Name} value={list.Description__c} id={list.Id} > Start </button>
+												</div>
+
+												<div class="btnDiv">
+													<button class="slds-button slds-button_neutral stopBtn"> Stop
+													</button>
+												</div>
+												<div class="timecls">
+													<b>Estimated Time</b>
+													<p>00:00:00</p>
+												</div>
+											</div>
+										</template>
+                </div>
+            </lightning-tab>
+            <lightning-tab label="Completed">
+                <div class="brTabDiv"></div> Completed Course
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</template>

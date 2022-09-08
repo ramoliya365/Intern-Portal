@@ -1,0 +1,255 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+}
+
+.imgDiv {
+    height: 40%;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+.titleDiv {
+    margin-top: 12vh;
+}
+
+.workTitle {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.workDisc {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.workContainer {
+    position: relative;
+    margin-top: 30vh;
+    padding: 0 10%;
+}
+
+.workContainer .slds-col {
+    padding: 0 1.5%;
+}
+
+.subContainer {
+    background: #edeaea;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem 7%;
+    height: 66vh;
+    overflow: auto;
+}
+
+.passengerDetails {
+    background: #edeaea;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 66vh;
+    overflow: hidden;
+}
+
+.workContainer h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.brDiv {
+    /* margin: 5px -8%; */
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.flightDetailsDiv {
+    margin: auto;
+    width: 75%;
+}
+
+.overallProgress {
+    height: 50%;
+}
+
+.detailHeader {
+    font-weight: 600;
+}
+
+.brTabDiv {
+    width: 116%;
+    margin: -20px -8% 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.slds-tabs_default__nav {
+    border: none;
+}
+
+.moduleDiv {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    height: 115px;
+    margin: 10px 0;
+    display: flex;
+}
+
+.moduleContainer {
+    height: 55vh;
+    /* overflow: auto; */
+}
+
+.imgSmallDiv {
+    width: 25%;
+    display: grid;
+    align-content: center;
+}
+
+.imgSmallDiv img {
+    margin: auto;
+    height: 90px;
+}
+
+.contentDiv {
+    width: 55%;
+    padding: 10px;
+}
+
+.contentDiv h3 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.contentDiv p {
+    font-size: 11px;
+    color: #949191;
+}
+
+.btnDiv {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.startBtn {
+    background: #02ACE1;
+    color: #fff;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    font-weight: 400;
+    width: 85px;
+    font-size: 15px;
+    height: 22px;
+    margin-top: 75px;
+}
+
+.buttomContent {
+    display: flex;
+    height: 30px;
+}
+
+.buttomContent div {
+    width: 50%;
+}
+
+.planDiv {
+    border-bottom-style: dashed;
+    text-align: center;
+    position: relative;
+}
+
+.planDiv h4 {
+    color: #949191;
+    font-size: 10px;
+}
+
+.planDiv h5 {
+    font-size: 9px;
+}
+
+.leftPlanImg {
+    position: absolute;
+    left: 10px;
+    top: 30%;
+}
+
+.rightPlanImg {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+}
+
+.buttomContent h1 {
+    line-height: 48px;
+    padding: 5px;
+}
+
+.taskDiv {
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 7px 0;
+}
+
+.taskDiv1 {
+    font-size: 17px;
+    font-weight: 500;
+    width: 15%;
+    text-align: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.taskDiv2 {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskDiv2 p {
+    font-size: 15px;
+    font-weight: 500;
+    width: 40%;
+    text-align: center;
+}
+
+.taskBtnDiv {
+    margin-right: 10px;
+}
+
+.taskBtn1,
+.taskBtn2 {
+    width: 47px;
+    height: 20px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.taskBtn1 {
+    background: #02ACE1;
+    color: #fff;
+}
+
+.taskBtn2 {
+    background: #D9D9D9;
+    color: #000;
+}
+
+
+/* updated on 6th September  */
+
+.passengerDetails::-webkit-scrollbar,
+.subContainer::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+    .overallProgress {
+        height: 40%;
+    }
+}

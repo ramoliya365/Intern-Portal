@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Community Theme Component">
+    <aura:attribute name="blueBackground" type="Boolean" default="false" />
+    <aura:attribute name="smallLogo" type="Boolean" default="false" />
+    <aura:attribute name="search" type="Aura.Component[]" required="false" />
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" />
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false" />
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false" />
+    <div>
+        <div class="navigation">
+            <c:mtp_headerCmp></c:mtp_headerCmp>
+            <!-- {!v.navBar} -->
+        </div>
+        <div class="mainContentArea">
+            <div class="">
+                {!v.body}
+            </div>
+        </div>
+    </div>
+</aura:component>

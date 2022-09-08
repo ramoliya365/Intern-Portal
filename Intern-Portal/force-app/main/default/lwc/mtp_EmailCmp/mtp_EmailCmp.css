@@ -1,0 +1,20 @@
+.form {
+    background: white;
+}
+
+.popover {
+    left: -145px;
+    bottom: 52px;
+}
+
+
+.maindiv{
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin: auto;
+}
+
+.subdiv{
+    /* width: 70%; */
+}

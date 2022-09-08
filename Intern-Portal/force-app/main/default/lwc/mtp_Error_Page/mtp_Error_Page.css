@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(/resource/InterFonts);
+}
+
+@media only screen and (min-width: 320px) {
+    .child-main {
+        width: 32%;
+    }
+    .child-one{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .child-main {
+        width: 32%;
+    }
+    .child-one{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .child-main {
+        width: 32%;
+    }
+    .child-one{
+        font-size: 2.3rem;
+    }
+}
+
+@media only screen and (min-width: 1365px) {
+    .parent-div{
+        width: auto;
+        height: 48rem !important;
+    }
+    .child-main {
+        width: 32%;
+    }
+    .child-one{
+        font-size: 2.9rem;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .parent-div{
+        width: auto;
+        height: 59.2rem !important;
+    }
+    .child-one {
+        font-size: 62px !important;
+    }
+}
+
+.siteforceStarterBody ..slds-m-top_x-large{
+    margin: 0 !important;
+}
+
+.parent-div {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.child-main{
+    width: 32%;
+}
+
+.child-one {
+    line-height: 1.4;
+    font-family: "Inter", sans-serif;
+    letter-spacing: normal;
+}
+
+.child-two {
+    font-size: 15px;
+    margin: 3% 0 0 3%;
+}
+
+a { color: inherit; }
